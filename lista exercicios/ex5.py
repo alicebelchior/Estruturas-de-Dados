@@ -1,0 +1,2 @@
+# Em Python crie um script que deverá solicitar um nome, o programa deverá
+# exibir todos os caracteres do nome, um caractere por linha
