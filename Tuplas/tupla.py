@@ -15,3 +15,13 @@ print(tupla[1])
 # tupla.append(4)
 # tupla[1] = 4
 # tupla[2] = 5
+
+# para criar/converter um objeto em uma tupla, usa-se a função tuple()
+tuplaEx = ([i for i in range(11)])
+print(tuplaEx)
+print(type(tuplaEx))
+
+#tupla -> lista -> tupla
+tuplaExTupla = tuple([i for i in range(11)])
+print(tuplaExTupla)
+print(type(tuplaExTupla))
