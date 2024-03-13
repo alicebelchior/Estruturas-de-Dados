@@ -11,15 +11,19 @@ dici["geografia"] = [85, 17, 51, 59]
 dici["biologia"] = [55, 84, 66, 74]
 dici["química"] = [99, 85, 74, 17]
 
+<<<<<<< HEAD
 # listando os dados armazenados
 for chave in dici:
      print(f'\n {chave} - {dici[chave]}')
 print('\n')
 
+=======
+>>>>>>> f9354f3199b165371e34772635f87b3ad3aab0f9
 #variaveis para obter a média
 soma = 0
 media = 0
 
+<<<<<<< HEAD
 for chave in dici:
      for valor in dici[chave]:
           soma += valor
@@ -29,3 +33,13 @@ print(soma)
 for chave in dici:
      media = soma / 4
      print(f'\n {chave} - {media}')
+=======
+for disciplina in dici:
+     for nota in dici[disciplina]:
+          soma += nota
+
+#imprimindo valor da media     
+for disciplina in dici:
+     media = soma / 4
+     print(f'\n {disciplina} - {media}')
+>>>>>>> f9354f3199b165371e34772635f87b3ad3aab0f9
