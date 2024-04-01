@@ -11,4 +11,4 @@ def dados_usuario(nome, idade, salario, desconto):
      print(f'{idade}')
      print(f'{salario}')
      print(f'{desconto}')
-dados_usuario(salario=3000, desconto=1000, idade=30, nome='Manoel')Funções/ex2_function.py
+dados_usuario(salario=3000, desconto=1000, idade=30, nome='Manoel')
