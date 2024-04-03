@@ -19,8 +19,7 @@ def div(a, b):
 # loop para continuar na calculadora
 while True:
      #  opções de operação
-     print('Selecione uma operação:')
-     operacao = int(input(
+     operacao = int(input('Selecione uma operação:\n'
           '1. Adição\n'
           '2. Subtração\n'
           '3. Mutiplicação\n'
