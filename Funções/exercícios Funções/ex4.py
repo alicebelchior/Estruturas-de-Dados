@@ -17,6 +17,16 @@ def div(a, b):
      return a / b
 
 # loop para continuar na calculadora
+def calculadora(add, sub, mult, div, operacao, a, b):
+    if operacao == 1:
+         print(f'{a} + {b} = {add(a, b)}')
+    elif operacao == 2:
+         print(f'{a} - {b} = {sub(a, b)}')
+    elif operacao == 3:
+         print(f'{a} x {b} = {mult(a, b)}')
+    elif operacao == 4:
+         print(f'{a} / {b} = {div(a, b)}')
+
 while True:
      #  opções de operação
      operacao = int(input('Selecione uma operação:\n'
@@ -30,14 +40,7 @@ while True:
      b = int(input('Digite o segundo numero: '))
 
      # condição para as operações
-     if operacao == 1:
-          print(f'{a} + {b} = {add(a, b)}')
-     elif operacao == 2:
-          print(f'{a} - {b} = {sub(a, b)}')
-     elif operacao == 3:
-          print(f'{a} x {b} = {mult(a, b)}')
-     elif operacao == 4:
-          print(f'{a} / {b} = {div(a, b)}')
+     calculadora(add, sub, mult, div, operacao, a, b)
      
      # verificar se o usuario quer continuar
      continuar = (input('Deseja continuar(s/n): '))
