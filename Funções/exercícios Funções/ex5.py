@@ -1,17 +1,17 @@
 # Escreva um script em Python para simular o funcionamento de uma lâmpada, nesse programa o usuário poderá ligar e desligar a lâmpada, o programa deverá informar se a lâmpada está ligada ou desligada. Monte este programa utilizando funções.
 
-# originalmente a lampada estara desligada
+# originalmente a lampada esta desligada
 lampada_ligada = False
 
 # lampada ligada
 def lamp_on():
-     lampada_ligada
+     global lampada_ligada
      lampada_ligada = True
      
      
 # lampada desligada
 def lamp_off():
-     lampada_ligada
+     global lampada_ligada
      lampada_ligada = False
      
 # verificar estado da lampada
