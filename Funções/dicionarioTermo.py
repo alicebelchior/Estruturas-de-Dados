@@ -4,3 +4,11 @@
      # Um termo pode ser acessado e deve exibir todas as suas definições; 
      # O programa deve permitir a exclusão de um ou mais termos quando o usuário indicar o termo;
      
+dicionario = []
+
+opcao = int(input("Escolha uma opção: \n"
+                       "1 - Adicionar palavra\n"
+                       "2 - Ler palavra\n"
+                       "3 - Excluir palavra\n"
+                       "4 - Sair\n"))
+
