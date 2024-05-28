@@ -41,16 +41,20 @@ while True:
      elif opcao == 2:
           # mostrando os termos do dicionario
           for termo in dicionario:
-               print(termo)
+               print(f"Tem-se o(s) seguinte(s) termo(s): \n"
+               f"{termo}")
           
           # mostrando as definições dos termos
           leitor = input("Digite o termo cujas definições você deseja ler: \n")
           if leitor == termo:
                
-          
+               # exibição das definições
+               for termo in dicionario:
+                    print(f"Definições de {dicionario[termo.lower()]}: \n"
+                         f"{dicionario[definicoes]}")
           
      # excluir termo
-     # elif opcao == 3:
+     elif opcao == 3:
           
           
      # sair
