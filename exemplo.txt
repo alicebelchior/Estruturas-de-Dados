@@ -1,0 +1,4 @@
+
+Bom dia!
+Eu sou um arquivo de teste!
+blá, blá, blá!

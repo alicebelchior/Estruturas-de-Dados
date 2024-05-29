@@ -35,27 +35,47 @@ while True:
           
           # adicionando o termo e suas definições ao dicionário (chave: valor)
           dicionario[termo.lower()] = definicoes #.lower() = deixa tudo em minusculo
-          print("Dicionário atualizado!")
+          print("Dicionário atualizado! \n")
      
      # ler termo
      elif opcao == 2:
           # mostrando os termos do dicionario
+          print("Tem-se o(s) seguinte(s) termo(s):")
           for termo in dicionario:
-               print(f"Tem-se o(s) seguinte(s) termo(s): \n"
-               f"{termo}")
+               print(f"{termo}")
           
           # mostrando as definições dos termos
           leitor = input("Digite o termo cujas definições você deseja ler: \n")
-          if leitor == termo:
+          
+          #verificando se o termo existe no dicionario
+          if leitor.lower() in dicionario:
+               # se existir, o termo é recuperado do dicionario pela var
+               definicoes = dicionario[leitor.lower()]
+               print(f"As definições do termo {leitor} são")
                
                # exibição das definições
-               for termo in dicionario:
-                    print(f"Definições de {dicionario[termo.lower()]}: \n"
-                         f"{dicionario[definicoes]}")
+               for definicao in definicoes:
+                    print(f" - {definicao}")
+          else:
+               print("Essa palavra não existe no dicionário \n")
+          print()
           
      # excluir termo
      elif opcao == 3:
+          # mostrando os termos do dicionario
+          print("Tem-se o(s) seguinte(s) termo(s):")
+          for termo in dicionario:
+               print(f"{termo}")
           
+          # mostrando os termos que se quer excluir
+          leitor = input("Digite o termo que você gostaria de excluir: \n")
+          
+          #verificando se o termo existe no dicionario
+          if leitor.lower() in dicionario:
+               del dicionario[leitor.lower()]
+               print(f"O termo {leitor} foi excluído com sucesso! \n")
+          else: 
+               print("Essa palavra não existe no dicionário \n")
           
      # sair
      elif opcao == 4:
