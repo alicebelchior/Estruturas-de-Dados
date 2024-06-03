@@ -49,13 +49,22 @@ while True:
      
      # listar palavra   
      elif opcao == 2:
-          
+          print("-" *20)
+          print("Tem-se gravadas as seguintes palavras:")
+          for palavra in lista_palavra:
+               print(f"{palavra}")
+          print()
           
      # sair  
      elif opcao == 3:
-          
           # gravar os dados contidos na lista no momento que for finalizado
           gravacao()
+          print("Já deu, então, né? Tchau. \n")
+          break
           
      else:
           print("Essa opção não existe, digite uma opção válida.")
+
+print("Programa encerrado \n")
+# chamando a função leitura pra mostrar o arquivo
+leitura() 
