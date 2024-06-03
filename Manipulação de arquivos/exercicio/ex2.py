@@ -27,10 +27,12 @@ lista_numeros = []
 
 def gravacao():
      with open("numero.pkl", "wb") as arquivo:
-          pickle.dump(lista_numeros, arquivo)
+          # loop para escrever os numeros no arquivo
+          for numero in lista_numeros:
+               pickle.dump(lista_numeros, arquivo)
           
 def leitura():
-     with open("neumero.pkl", "rb") as arquivo:
+     with open("numero.pkl", "rb") as arquivo:
           pickle.load(arquivo)
           
 def exibir_calculo():
@@ -94,6 +96,7 @@ while True:
           
      # exibir calculos 
      elif opcao == 3:
+          print("-" *20)
           exibir_calculo()
           print()
           
