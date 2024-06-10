@@ -32,7 +32,8 @@ def menu():
      print("1. Inserir palavra \n"
            "2. Listar palavra \n"
            "3. Sair")
-     
+# chamando a função leitura pra mostrar o arquivo
+leitura()
 
 # programa principal
 while True:
@@ -66,5 +67,4 @@ while True:
           print("Essa opção não existe, digite uma opção válida.")
 
 print("Programa encerrado \n")
-# chamando a função leitura pra mostrar o arquivo
-leitura() 
+ 
