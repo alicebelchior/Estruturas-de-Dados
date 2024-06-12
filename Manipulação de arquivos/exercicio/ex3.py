@@ -10,29 +10,32 @@
 # ● Ao inicializar o programa deve carregar os dados gravados na última execução;
 # ● As operações devem ser feitas com a utilização de funções
 
-import json
+# "a" = modo adição e uma linha é adicionada ao final do arquivo
+with open("dicionario.txt", "a") as arquivo:
+     arquivo.write("\nEsta linha foi adicionada depois da primeira")
 
 # dicionario vazio para "n" termos
 dicionario_termo = {}
 
 def gravacao():
-     with open("dicionario.json", "w") as arquivo:
-          for termo in dicionario_termo.items():
-               json.dump(termo, arquivo)
+     with open("dicionario.txt", "w") as arquivo:
+          # loop para escrever as palavras no arquivo
+          for termo in dicionario_termo:
+               arquivo.write(f"{termo}, 1º atributo: {atributo_1}, 2º atributo: {atributo_2} \n")
           
 def leitura():
-     with open("dicionario.json", "r") as arquivo:
-          dicionario_termo = json.load(arquivo)
+     with open ("dicionario.txt", "r") as arquivo:
+          conteudo = arquivo.read()
+          print(conteudo) 
 
 def menu():
      print("1. Inserir termo\n"
            "2. Listar termo \n"
            "3. Sair")
 
-#programa principal 
-
 leitura()
 
+#programa principal 
 while True:
      menu()
      opcao = int(input("Escolha uma opção: "))
@@ -50,9 +53,8 @@ while True:
      elif opcao == 2:
           print("-" *20)
           print("Tem-se gravados os seguintes termos:")
-          for termo in dicionario_termo:
-               print(dicionario_termo.items())
-               #.items() retorna uma visualização dos itens do dicionário
+          print(dicionario_termo.items())
+          #.items() retorna uma visualização dos itens do dicionário
           
      # SAIR
      elif opcao == 3:
